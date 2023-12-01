@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:sirius_new="http://www.example.org/sirius_new" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_juk88JCOEe6adqAu97Nycg" selectedViews="_YMAcMJCPEe6adqAu97Nycg" version="15.1.0.202211301600">
+    <semanticResources>My.sirius_new</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_YMAcMJCPEe6adqAu97Nycg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_5sizoJCPEe6adqAu97Nycg" name="thesisModel1" repPath="#_5rrQ8JCPEe6adqAu97Nycg" changeId="1701471111549">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']"/>
+        <target xmi:type="sirius_new:ThesisModel" href="My.sirius_new#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_5rrQ8JCPEe6adqAu97Nycg">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_5toYwJCPEe6adqAu97Nycg" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_5toYwZCPEe6adqAu97Nycg" type="Sirius" element="_5rrQ8JCPEe6adqAu97Nycg" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_5uqTgJCPEe6adqAu97Nycg" type="2002" element="_5t9I4JCPEe6adqAu97Nycg">
+          <children xmi:type="notation:Node" xmi:id="_5u0rkJCPEe6adqAu97Nycg" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_5u4V8JCPEe6adqAu97Nycg" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_5vG_cJCPEe6adqAu97Nycg" type="3008" element="_5uIIAJCPEe6adqAu97Nycg">
+              <children xmi:type="notation:Node" xmi:id="_5vINkJCPEe6adqAu97Nycg" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_5vI0oJCPEe6adqAu97Nycg" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_ed-UEJCQEe6adqAu97Nycg" type="3008" element="_edkrcJCQEe6adqAu97Nycg">
+                  <children xmi:type="notation:Node" xmi:id="_ed-7IJCQEe6adqAu97Nycg" type="5005"/>
+                  <children xmi:type="notation:Node" xmi:id="_ed_iMJCQEe6adqAu97Nycg" type="7002">
+                    <children xmi:type="notation:Node" xmi:id="_rOSk4JCQEe6adqAu97Nycg" type="3007" element="_rN7YgJCQEe6adqAu97Nycg">
+                      <children xmi:type="notation:Node" xmi:id="_rOVBIJCQEe6adqAu97Nycg" type="5003">
+                        <layoutConstraint xmi:type="notation:Location" xmi:id="_rOVBIZCQEe6adqAu97Nycg" y="5"/>
+                      </children>
+                      <children xmi:type="notation:Node" xmi:id="_vyskMJCQEe6adqAu97Nycg" type="3004" element="_vyV-4JCQEe6adqAu97Nycg">
+                        <styles xmi:type="notation:ShapeStyle" xmi:id="_vyskMZCQEe6adqAu97Nycg" fontName="Segoe UI"/>
+                        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vyskMpCQEe6adqAu97Nycg"/>
+                      </children>
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_rOSk4ZCQEe6adqAu97Nycg" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rOSk4pCQEe6adqAu97Nycg" x="109" y="50" width="73" height="61"/>
+                    </children>
+                    <styles xmi:type="notation:SortingStyle" xmi:id="_ed_iMZCQEe6adqAu97Nycg"/>
+                    <styles xmi:type="notation:FilteringStyle" xmi:id="_ed_iMpCQEe6adqAu97Nycg"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_ed-UEZCQEe6adqAu97Nycg" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ed-UEpCQEe6adqAu97Nycg" x="49" y="42" width="295" height="135"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_5vI0oZCPEe6adqAu97Nycg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_5vI0opCPEe6adqAu97Nycg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_5vG_cZCPEe6adqAu97Nycg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5vG_cpCPEe6adqAu97Nycg" x="361" y="54" width="411" height="219"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_KyfygJCREe6adqAu97Nycg" type="3008" element="_KyHYAJCREe6adqAu97Nycg">
+              <children xmi:type="notation:Node" xmi:id="_KygZkJCREe6adqAu97Nycg" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_KygZkZCREe6adqAu97Nycg" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_68LkoJCREe6adqAu97Nycg" type="3007" element="_67zKIJCREe6adqAu97Nycg">
+                  <children xmi:type="notation:Node" xmi:id="_68MywJCREe6adqAu97Nycg" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_68MywZCREe6adqAu97Nycg" y="5"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_--KMUJCREe6adqAu97Nycg" type="3003" element="_-934cJCREe6adqAu97Nycg">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_--KMUZCREe6adqAu97Nycg" fontName="Segoe UI"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_--KMUpCREe6adqAu97Nycg"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_68LkoZCREe6adqAu97Nycg" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_68MLsJCREe6adqAu97Nycg" x="70" y="96" width="176" height="49"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_68NZ0JCREe6adqAu97Nycg" type="3007" element="_67zxMJCREe6adqAu97Nycg">
+                  <children xmi:type="notation:Node" xmi:id="_68OA4JCREe6adqAu97Nycg" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_68OA4ZCREe6adqAu97Nycg" y="5"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_--KzYJCREe6adqAu97Nycg" type="3003" element="_-934cpCREe6adqAu97Nycg">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_--KzYZCREe6adqAu97Nycg" fontName="Segoe UI"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_--KzYpCREe6adqAu97Nycg"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_68NZ0ZCREe6adqAu97Nycg" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_68NZ0pCREe6adqAu97Nycg" x="55" y="168" width="205" height="55"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_xm2iEJCTEe6adqAu97Nycg" type="3007" element="_xmZPEJCTEe6adqAu97Nycg">
+                  <children xmi:type="notation:Node" xmi:id="_xm3wMJCTEe6adqAu97Nycg" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_xm3wMZCTEe6adqAu97Nycg" y="5"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_xm4-UJCTEe6adqAu97Nycg" type="3003" element="_xmZ2IJCTEe6adqAu97Nycg">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_xm4-UZCTEe6adqAu97Nycg" fontName="Segoe UI"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xm4-UpCTEe6adqAu97Nycg"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_xm2iEZCTEe6adqAu97Nycg" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xm2iEpCTEe6adqAu97Nycg" x="70" y="42" width="190" height="42"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_KygZkpCREe6adqAu97Nycg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_KygZk5CREe6adqAu97Nycg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_KyfygZCREe6adqAu97Nycg" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KyfygpCREe6adqAu97Nycg" x="19" y="78" width="314" height="261"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_5u4V8ZCPEe6adqAu97Nycg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_5u4V8pCPEe6adqAu97Nycg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_5uqTgZCPEe6adqAu97Nycg" fontName="Segoe UI"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5uqTgpCPEe6adqAu97Nycg" x="120" y="42" width="821" height="423"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_5toYwpCPEe6adqAu97Nycg"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_5uJ9MJCPEe6adqAu97Nycg" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_5uLLUJCPEe6adqAu97Nycg"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_5t9I4JCPEe6adqAu97Nycg" name="Thesis Model">
+      <target xmi:type="sirius_new:ThesisModel" href="My.sirius_new#/"/>
+      <semanticElements xmi:type="sirius_new:ThesisModel" href="My.sirius_new#/"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_CWivUJCQEe6adqAu97Nycg" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_5uIIAJCPEe6adqAu97Nycg" name="NOVA">
+        <target xmi:type="sirius_new:University" href="My.sirius_new#//@university"/>
+        <semanticElements xmi:type="sirius_new:University" href="My.sirius_new#//@university"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_VinioJCQEe6adqAu97Nycg" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']/@subContainerMappings[name='University']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']/@subContainerMappings[name='University']"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_edkrcJCQEe6adqAu97Nycg" name="FCT">
+          <target xmi:type="sirius_new:Faculty" href="My.sirius_new#//@university/@faculty"/>
+          <semanticElements xmi:type="sirius_new:Faculty" href="My.sirius_new#//@university/@faculty"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_hM7NoJCQEe6adqAu97Nycg" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']/@subContainerMappings[name='University']/@subContainerMappings[name='Faculty']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']/@subContainerMappings[name='University']/@subContainerMappings[name='Faculty']"/>
+          <ownedDiagramElements xmi:type="diagram:DNode" uid="_rN7YgJCQEe6adqAu97Nycg" name="DI" width="3" height="3" resizeKind="NSEW">
+            <target xmi:type="sirius_new:Department" href="My.sirius_new#//@university/@faculty/@departments"/>
+            <semanticElements xmi:type="sirius_new:Department" href="My.sirius_new#//@university/@faculty/@departments"/>
+            <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+            <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+            <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+            <ownedStyle xmi:type="diagram:BundledImage" uid="_vyV-4JCQEe6adqAu97Nycg" labelSize="12" borderColor="136,136,136" labelPosition="node" color="136,136,136">
+              <description xmi:type="style:BundledImageDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']/@subContainerMappings[name='University']/@subContainerMappings[name='Faculty']/@subNodeMappings[name='Department']/@style"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']/@subContainerMappings[name='University']/@subContainerMappings[name='Faculty']/@subNodeMappings[name='Department']"/>
+          </ownedDiagramElements>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_KyHYAJCREe6adqAu97Nycg" name="Thesis">
+        <target xmi:type="sirius_new:Thesis" href="My.sirius_new#//@thesis"/>
+        <semanticElements xmi:type="sirius_new:Thesis" href="My.sirius_new#//@thesis"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Q0w28JCREe6adqAu97Nycg" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']/@subContainerMappings[name='Thesis']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']/@subContainerMappings[name='Thesis']"/>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_67zKIJCREe6adqAu97Nycg" name="Research" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="sirius_new:Milestone" href="My.sirius_new#//@thesis/@milestones.0"/>
+          <semanticElements xmi:type="sirius_new:Milestone" href="My.sirius_new#//@thesis/@milestones.0"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Square" uid="_-934cJCREe6adqAu97Nycg" labelSize="12" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']/@subContainerMappings[name='Thesis']/@subNodeMappings[name='Milestone']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']/@subContainerMappings[name='Thesis']/@subNodeMappings[name='Milestone']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_67zxMJCREe6adqAu97Nycg" name="Data Analysis" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="sirius_new:Milestone" href="My.sirius_new#//@thesis/@milestones.1"/>
+          <semanticElements xmi:type="sirius_new:Milestone" href="My.sirius_new#//@thesis/@milestones.1"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Square" uid="_-934cpCREe6adqAu97Nycg" labelSize="12" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']/@subContainerMappings[name='Thesis']/@subNodeMappings[name='Milestone']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']/@subContainerMappings[name='Thesis']/@subNodeMappings[name='Milestone']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_xmZPEJCTEe6adqAu97Nycg" name="Master's" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="sirius_new:Degree" href="My.sirius_new#//@thesis/@degree"/>
+          <semanticElements xmi:type="sirius_new:Degree" href="My.sirius_new#//@thesis/@degree"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_xmZ2IJCTEe6adqAu97Nycg" labelSize="12" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']/@subContainerMappings[name='Thesis']/@subNodeMappings[name='Degree']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer/@containerMappings[name='thesisModel']/@subContainerMappings[name='Thesis']/@subNodeMappings[name='Degree']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_5sJLAJCPEe6adqAu97Nycg"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/my.project.design/description/project.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='123']/@defaultLayer"/>
+    <target xmi:type="sirius_new:ThesisModel" href="My.sirius_new#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

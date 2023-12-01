@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sirius_new:ThesisModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sirius_new="http://www.example.org/sirius_new">
+  <university name="NOVA">
+    <faculty name="FCT">
+      <departments name="DI"/>
+    </faculty>
+  </university>
+  <thesis>
+    <degree name="Master's"/>
+    <milestones name="Research"/>
+    <milestones name="Data Analysis"/>
+    <ethicalIssues name="Issue"/>
+    <tasks name="Data research"/>
+    <tasks name="Read dissertations"/>
+    <tools name="Books"/>
+  </thesis>
+  <professor name="Manuel"/>
+  <student name="Rafael"/>
+</sirius_new:ThesisModel>
