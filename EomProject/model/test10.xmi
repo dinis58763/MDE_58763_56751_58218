@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sheets="http://www.example.org/sheets">
+  <sheets:Sheet columns="/1 /2 /3 /4" lines="/5 /10 /15"/>
+  <sheets:Column value="name"/>
+  <sheets:Column value="description"/>
+  <sheets:Column value="taskDeadline"/>
+  <sheets:Column value="status"/>
+  <sheets:Line id="1" cells="/6 /7 /8 /9"/>
+  <sheets:Cell value="Literature Review"/>
+  <sheets:Cell value="This is the description of the literature review"/>
+  <sheets:Cell value="2023-11-01"/>
+  <sheets:Cell value="DONE"/>
+  <sheets:Line id="2" cells="/11 /12 /13 /14"/>
+  <sheets:Cell value="Research"/>
+  <sheets:Cell value="This is the description of the research"/>
+  <sheets:Cell value="2023-11-21"/>
+  <sheets:Cell value="IN_PROGESS"/>
+  <sheets:Line id="3" cells="/16 /17 /18 /19"/>
+  <sheets:Cell value="Data Collection"/>
+  <sheets:Cell value="This is the description of the Data Collection"/>
+  <sheets:Cell value="2023-12-20"/>
+  <sheets:Cell value="NOT_STARTED"/>
+</xmi:XMI>

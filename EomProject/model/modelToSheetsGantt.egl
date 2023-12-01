@@ -1,0 +1,131 @@
+Sub Macro7()
+'
+' Macro7 Macro
+'
+
+'
+    Application.CutCopyMode = False
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlCenter
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    ActiveCell.FormulaR1C1 = "startDate"
+    Range("G1").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlCenter
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    ActiveCell.FormulaR1C1 = "duration"
+    Range("F2").Select
+    ActiveCell.FormulaR1C1 = "10/15/2023"
+    Range("G2").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=RC[-4]-RC[-1]"
+    [% for (SheetsModel in Sheet.allInstances()) { %]
+    [% var rowNum = 3; %]
+	[% var countNum = 2; %]
+	[% var dateI = 2; %]
+	[% var counter = 1; %]
+	[% var counterLines = 1; %]
+	[% var range = 1; %]
+    [% for (line in SheetsModel.lines) { %]
+    [% if (counter < SheetsModel.lines.size()) { %]
+    Range("F[%=rowNum%]").Select
+    ActiveCell.FormulaR1C1 = "[% if (line.cells.size() > 2 and line.cells.at(2) != null) { %]
+    [%=line.cells.at(2).value%] [%}%][% else { %]null[%}%]"
+    Selection.NumberFormat = "m/d/yyyy"
+    Range("G[%=rowNum%]").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=RC[-4]-RC[-1]"
+    [% rowNum = rowNum + 1; %]
+    [% counter = counter + 1; %]
+    [%}%]
+    [%}%]
+    [% for (line in SheetsModel.lines) { %]
+    Range("F[%=countNum%]").Select
+    Selection.NumberFormat = "General"
+    [% countNum = countNum + 1; %]
+    [% counterLines = counterLines + 1; %]
+    [%}%]
+    Range("A1:A[%=counterLines%],F1:G[%=counterLines%]").Select
+    Range("F1").Activate
+    ActiveSheet.Shapes.AddChart2(297, xlBarStacked).Select
+    ActiveChart.SetSourceData Source:=Range("Row!$A$1:$A$[%=counterLines%],Row!$F$1:$G$[%=counterLines%]")
+    ActiveChart.FullSeriesCollection(1).Select
+    ActiveChart.FullSeriesCollection(1).Points(3).Select
+    ActiveChart.ChartArea.Select
+    ActiveChart.FullSeriesCollection(1).Select
+    ActiveChart.Axes(xlValue).Select
+    Selection.Format.Fill.Visible = msoFalse
+    [% for (line in SheetsModel.lines) { %]
+    Range("F[%=dateI%]").Select
+    Selection.NumberFormat = "m/d/yyyy"
+    [% dateI = dateI + 1; %]
+    [%}%]
+    ActiveSheet.ChartObjects("Chart 1").Activate
+    ActiveChart.Axes(xlCategory).Select
+    ActiveChart.Axes(xlCategory).ReversePlotOrder = True
+    ActiveChart.Legend.Select
+    Selection.Delete
+    ActiveSheet.ChartObjects("Chart 1").Activate
+    ActiveChart.Axes(xlValue).Select
+    Selection.TickLabels.Orientation = -45
+    ActiveChart.ChartTitle.Select
+    ActiveChart.ChartTitle.Text = "Gantt chart"
+    Selection.Format.TextFrame2.TextRange.Characters.Text = "Gantt chart"
+    With Selection.Format.TextFrame2.TextRange.Characters(1, 11).ParagraphFormat
+        .TextDirection = msoTextDirectionLeftToRight
+        .Alignment = msoAlignCenter
+    End With
+    With Selection.Format.TextFrame2.TextRange.Characters(1, 11).Font
+        .BaselineOffset = 0
+        .Bold = msoFalse
+        .NameComplexScript = "+mn-cs"
+        .NameFarEast = "+mn-ea"
+        .Fill.Visible = msoTrue
+        .Fill.ForeColor.RGB = RGB(89, 89, 89)
+        .Fill.Transparency = 0
+        .Fill.Solid
+        .Size = 14
+        .Italic = msoFalse
+        .Kerning = 12
+        .Name = "+mn-lt"
+        .UnderlineStyle = msoNoUnderline
+        .Spacing = 0
+        .Strike = msoNoStrike
+    End With
+    ActiveChart.FullSeriesCollection(2).Select
+    [% for (line in SheetsModel.lines) { %]
+    ActiveChart.FullSeriesCollection(2).Points([%=range%]).Select
+    With Selection.Format.Fill
+        .Visible = msoTrue
+        .ForeColor.ObjectThemeColor = msoThemeColorAccent4
+        .ForeColor.TintAndShade = 0
+        .ForeColor.Brightness = 0
+        .Transparency = 0
+        .Solid
+    End With
+    [% range = range + 1; %]
+    [%}%]
+    Range("I19").Select
+   	[%}%]
+   	
+End Sub
+
+
+[%
+  var t : Template = TemplateFactory.load("modelToSheetsGantt.egl");
+  t.generate("sheetsGantt.xlsm");
+%]

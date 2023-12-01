@@ -1,0 +1,51 @@
+import requests
+import json
+
+def create_card(api_key, api_token, list_id, names, board_id):
+    url = "https://api.trello.com/1/cards"
+
+    headers = {
+        "Accept": "application/json"
+    }
+
+    for task_name in names:
+        query = {
+            'key': api_key,
+            'token': api_token,
+            'idBoard': board_id,
+            'idList': list_id,
+            'name': task_name
+        }
+
+        response = requests.post(url, headers=headers, params=query)
+
+        print("Creating task:", task_name)
+        print("Response Code:", response.status_code)
+        print("Response Body:", response.text)  # Print the raw response text
+
+        try:
+            print("Parsed Response Body:", json.dumps(response.json(), sort_keys=True, indent=4, separators=(",", ": ")))
+        except json.decoder.JSONDecodeError:
+            print("Unable to parse response body as JSON.")
+
+if __name__ == "__main__":
+    api_key = "23face52cb51932bb6eb8a8b187b0a73"  # Replace with your actual API key
+    api_token = "ATTAc75512c90fc22df7b4ae5fd79d67d9ecab4441a70a1e625f156e873f8cb4abcb80B07654"  # Replace with your actual API token
+    list_id = "656927a76fc7953fecc37331"  # Replace with your actual list ID
+    board_id = "rNksPOTU"
+    [% for (ThesisModel in ThesisModel.allInstances()) { %]
+    task_names = []  # Create an empty list to store task names
+    
+    # Add task names to the list dynamically
+    [% for (task in ThesisModel.thesis.tasks) { %]
+	task_names.append("[%=task.name%]")
+    [%}%]
+    [%}%]
+    
+    create_card(api_key, api_token, list_id, task_names, board_id)
+
+ 
+[%
+  var t : Template = TemplateFactory.load("API_modelToTrello.egl");
+  t.generate("trello.py");
+%]

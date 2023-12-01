@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sheets="http://www.example.org/sheets">
+  <sheets:Sheet columns="/1 /2 /3" lines="/4 /8"/>
+  <sheets:Column value="name"/>
+  <sheets:Column value="description"/>
+  <sheets:Column value="completionDate"/>
+  <sheets:Line id="1" cells="/5 /6 /7"/>
+  <sheets:Cell value="Literature Review"/>
+  <sheets:Cell value="This is the description of the literature review"/>
+  <sheets:Cell value="2023-11-01"/>
+  <sheets:Line id="2" cells="/9 /10 /11"/>
+  <sheets:Cell value="Research"/>
+  <sheets:Cell value="This is the description of the research"/>
+  <sheets:Cell value="2023-11-21"/>
+</xmi:XMI>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:latex="http://www.example.org/latex">
+  <latex:Docs>
+    <cover thesis_name="Evaluation of Models" prof_name="Manuel" degree_name="Master's" student_name="Johny" dept_name="DI" uni_name="NOVA"/>
+  </latex:Docs>
+  <latex:Docs>
+    <sections name="Literature Reiew"/>
+    <sections name="Watch"/>
+  </latex:Docs>
+  <latex:Docs>
+    <sections name="Data Privacy"/>
+    <sections name="et223"/>
+  </latex:Docs>
+  <latex:Docs>
+    <sections name="LaTex"/>
+    <sections name="google"/>
+  </latex:Docs>
+</xmi:XMI>

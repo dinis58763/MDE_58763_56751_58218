@@ -1,0 +1,157 @@
+context Task {
+  constraint TaskNameNotEmpty {
+	check: self.name.size() > 0
+	message: "Task must have a non-empty name."
+	  }
+	  
+  constraint TaskDescriptionNotEmpty {
+    check: self.taskDescription.size() > 0
+    message: "Task must have a non-empty task description."
+  }
+  
+  constraint ValidTaskDeadline {
+    check: self.deadline <> null
+    message: "Task must have a valid deadline."
+  }
+  
+  constraint UniqueTaskNames {
+    check: self.eContainer().tasks->select(t | t.name = self.name)->size() <= 1
+    message: "Each task within a thesis must have a unique name."
+  }
+  
+  constraint ValidTaskStatus {
+        check: (self.status = "DONE" and self.deadline <= 2023-11-30) or
+                   (self.status <> "DONE" and self.deadline > 2023-11-30)
+        message : "Task status is inconsistent with deadline"
+    }
+}
+
+context Milestone {
+  constraint MilestoneNameNotEmpty {
+    check: self.name.size() > 0
+    message: "Milestone must have a non-empty name."
+  }
+  
+  constraint ValidMilestoneCompletionDate {
+    check: self.completionDate <> null
+    message: "Milestone must have a valid completion date."
+  }
+  
+  constraint UniqueMilestoneNames {
+    check: self.eContainer().milestones->select(m | m.name = self.name)->size() <= 1
+    message: "Each milestone within a thesis must have a unique name."
+  }
+  
+  constraint NonEmptyMilestoneDescription {
+    check: not self.description.isEmpty()
+    message: "The description of the milestone must be non-empty"
+  }
+}
+
+context Student {
+  constraint ValidEmailAddress {
+    check: self.emailAddress.matches('[a-zA-Z0-9._%+\\-]+@[a-zA-Z0-9.\\-]+\\.[a-zA-Z]{2,}')
+    message: "Invalid email address for the student."
+  }
+  
+  constraint ValidAge {
+    check: self.age >= 18
+    message: "The student must have at least 18 years old"
+  }
+}
+
+context University {
+  constraint UniversityNameNotEmpty {
+    check: self.name.size() > 0
+    message: "University must have a non-empty name."
+  }
+}
+
+context Thesis {
+  constraint ThesisHasMilestones {
+    check: self.milestones->size() > 0
+    message: "Thesis must have at least one milestone."
+  }
+  
+  constraint AtLeastOneTask {
+    check: self.tasks->size() > 0
+    message: "The thesis must have at least one task."
+  }
+  
+  constraint OneDegree {
+    check: self.degree->size() == 1
+    message: "The thesis must have only one degree."
+  }
+  
+  constraint ThesisDescriptionNotEmpty {
+    check: self.description.size() > 0
+    message: "Thesis must have a non-empty description."
+  }
+}
+
+context EthicalIssue {
+  constraint EthicalIssueNameNotEmpty {
+    check: self.name.size() > 0
+    message: "EthicalIssue must have a non-empty name."
+  }
+  
+  constraint ValidEthicalIssueType {
+    check: not self.name.isEmpty() and not self.issueDescription.isEmpty()
+    message: "Ethical issue type and description must be specified."
+  }
+}
+
+context Faculty {
+  constraint FacultyHasDepartments {
+    check: self.departments->size() > 0
+    message: "Faculty must have at least one department."
+  }
+  
+  constraint UniqueFacultyNames {
+    check: self->select(f | f.name = self.name)->size() <= 1
+    message: "Faculty names must be unique within the University."
+  }
+}
+
+context Professor {
+  constraint ProfessorNameNotEmpty {
+    check: self.name.size() > 0
+    message: "Professor must have a non-empty name."
+  }
+}
+
+context Department {
+  constraint DepartmentNameNotEmpty {
+    check: self.name.size() > 0
+    message: "Department must have a non-empty name."
+  }
+}
+
+context Tool {
+  constraint ToolNameNotEmpty {
+    check: self.name.size() > 0
+    message: "Tool must have a non-empty name."
+  }
+}
+
+context ThesisModel {
+  constraint ValidUniversityReference {
+    check: self.university <> null
+    message: "ThesisModel must have a valid university reference."
+  }
+  
+  constraint ValidThesisReference {
+    check: self.thesis <> null
+    message: "ThesisModel must have a valid thesis reference."
+  }
+  
+  constraint UniqueProfessorStudentCombination {
+    check: ThesisModel.allInstances.select(t | t.professor = self.professor and t.student = self.student)->size() <= 1
+    message: "ThesisModel must have a unique combination of professor and student."
+  }
+  
+  constraint ThesisModelHasTools {
+    check: self.thesis.tools->size() > 0
+    message: "Thesis must have at least one tool."
+  }
+}

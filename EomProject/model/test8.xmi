@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<latex:Docs xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:latex="http://www.example.org/latex">
+  <cover thesis_name="Evaluation of Models" prof_name="Manuel" degree_name="Master's" student_name="Johny" dept_name="DI" uni_name="NOVA"/>
+  <sections name="Literature Reiew"/>
+  <sections name="Literature Review" description="Completed"/>
+  <sections name="Data Privacy"/>
+  <references tool_name="LaTex"/>
+</latex:Docs>

@@ -1,0 +1,58 @@
+@namespace(uri="http://www.example.org/eomProject", prefix="eomProject")
+
+var thesisModel1: new ThesisModel;
+ 
+var thesisInstance1: new Thesis;
+thesisInstance1.name = "Software Engineering Best Practices";
+thesisInstance1.description = "An exploration of best practices in software engineering.";
+thesisModel.thesis.add(thesisInstance1);
+
+var lisbonUniversity: new University;
+lisbonUniversity.name = "University of Lisbon";
+thesisModel1.university.add(lisbonUniversity);
+
+var vanessa: new Student;
+vanessa.name = "Vanessa";
+vanessa.age = 25;
+vanessa.emailAddress = "vanessa@gmail.com";
+thesisModel1.student.add(vanessa);
+
+var antonio: new Professor;
+antonio.name = "António";
+antonio.department = "Computer Science";
+thesisModel1.professor.add(antonio);
+
+var facultyInstance1: new Faculty;
+facultyInstance1.name = "NOVA FCT";
+lisbonUniversity.faculty.add(facultyInstance1);
+
+var departmentInstance1: new Department;
+departmentInstance1.name = "Physics";
+facultyInstance1.departments.add(departmentInstance1);
+
+var literatureReview: new Task;
+literatureReview.name = "Literature Review";
+literatureReview.taskDescription = "Conduct a comprehensive review of relevant literature.";
+literatureReview.deadline = "2023-12-31";
+literatureReview.status = "NOT_STARTED";
+thesisInstance1.tasks.add(literatureReview);
+
+var wizzardTool: new Tool;
+wizzardTool.name = "Wizzard";
+thesisInstance1.tools.add(wizzardTool);
+
+var dataPrivacyConcernsIssue: new EthicalIssue;
+dataPrivacyConcernsIssue.name = "Data Privacy Concerns";
+dataPrivacyConcernsIssue.issueDescription = "Concerns related to the privacy of collected data.";
+thesisInstance1.ethicalissues.add(dataPrivacyConcernsIssue);
+
+var literatureReviewCompleted: new Milestone;
+literatureReviewCompleted.name = "Literature Review Completed";
+literatureReviewCompleted.description = "All literature review tasks and activities are finished.";
+literatureReviewCompleted.completionDate = "2023-01-15";
+thesisInstance1.milestones.add(literatureReviewCompleted);
+
+var masterDegree1: new Degree;
+masterDegree1.name = "Master";
+thesisInstance1.degree.add(masterDegree1);
+

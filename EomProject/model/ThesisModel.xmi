@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eomProject:ThesisModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:eomProject="http://www.example.org/eomProject">
+  <university
+      name="NOVA">
+    <faculty
+        name="FCT">
+      <departments
+          name="DI"/>
+    </faculty>
+  </university>
+  <thesis name="Evaluation of Models">
+    <degree
+        name="Master's"/>
+    <milestones
+        name="Literature Review"
+        description="Completed"/>
+    <milestones
+        name="milest1"/>
+    <ethicalIssues
+        name="Data Privacy"/>
+    <ethicalIssues
+        name="et223"/>
+    <tasks name="Literature Review"
+        taskDescription="This is the description of the literature review"
+        deadline="2023-11-01"
+        status="DONE"/>
+    <tasks name="Research"
+        taskDescription="This is the description of the research"
+        deadline="2023-11-21"/>
+    <tasks name="Data Collection"
+        deadline="2023-11-21"/>
+    <tools name="LaTex"/>
+    <tools name="google"/>
+  </thesis>
+  <professor
+      name="Manuel"/>
+  <student name="Johny"
+      age="22"
+      emailAddress="johny@gmail.com"/>
+</eomProject:ThesisModel>

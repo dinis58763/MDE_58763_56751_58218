@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/EomProject/src" modelPluginID="EomProject" modelName="EomProject"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="13.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>eomProject.ecore</foreignModel>
+  <genPackages prefix="EomProject" disposableProviderFactory="true" ecorePackage="eomProject.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="eomProject.ecore#//Status">
+      <genEnumLiterals ecoreEnumLiteral="eomProject.ecore#//Status/DONE"/>
+      <genEnumLiterals ecoreEnumLiteral="eomProject.ecore#//Status/IN_PROGESS"/>
+      <genEnumLiterals ecoreEnumLiteral="eomProject.ecore#//Status/NOT_STARTED"/>
+    </genEnums>
+    <genClasses ecoreClass="eomProject.ecore#//Task">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Task/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Task/taskDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Task/deadline"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Task/status"/>
+    </genClasses>
+    <genClasses ecoreClass="eomProject.ecore#//Milestone">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Milestone/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Milestone/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Milestone/completionDate"/>
+    </genClasses>
+    <genClasses ecoreClass="eomProject.ecore#//Student">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Student/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Student/age"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Student/emailAddress"/>
+    </genClasses>
+    <genClasses ecoreClass="eomProject.ecore#//Tool">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Tool/name"/>
+    </genClasses>
+    <genClasses ecoreClass="eomProject.ecore#//EthicalIssue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//EthicalIssue/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//EthicalIssue/issueDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="eomProject.ecore#//Faculty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Faculty/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference eomProject.ecore#//Faculty/departments"/>
+    </genClasses>
+    <genClasses ecoreClass="eomProject.ecore#//University">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//University/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference eomProject.ecore#//University/faculty"/>
+    </genClasses>
+    <genClasses ecoreClass="eomProject.ecore#//Professor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Professor/name"/>
+    </genClasses>
+    <genClasses ecoreClass="eomProject.ecore#//Thesis">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Thesis/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Thesis/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference eomProject.ecore#//Thesis/degree"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference eomProject.ecore#//Thesis/milestones"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference eomProject.ecore#//Thesis/ethicalIssues"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference eomProject.ecore#//Thesis/tasks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference eomProject.ecore#//Thesis/tools"/>
+    </genClasses>
+    <genClasses ecoreClass="eomProject.ecore#//ThesisModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference eomProject.ecore#//ThesisModel/university"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference eomProject.ecore#//ThesisModel/thesis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference eomProject.ecore#//ThesisModel/professor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference eomProject.ecore#//ThesisModel/student"/>
+    </genClasses>
+    <genClasses ecoreClass="eomProject.ecore#//Department">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Department/name"/>
+    </genClasses>
+    <genClasses ecoreClass="eomProject.ecore#//Degree">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute eomProject.ecore#//Degree/name"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Viewpoint" ecorePackage="http://www.eclipse.org/sirius/1.1.0#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.eclipse.org/sirius/1.1.0#//FontFormat">
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//FontFormat/italic"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//FontFormat/bold"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//FontFormat/underline"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//FontFormat/strike_through"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.eclipse.org/sirius/1.1.0#//LabelAlignment">
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//LabelAlignment/CENTER"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//LabelAlignment/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//LabelAlignment/RIGHT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.eclipse.org/sirius/1.1.0#//SyncStatus">
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//SyncStatus/dirty"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//SyncStatus/sync"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="http://www.eclipse.org/sirius/1.1.0#//RGBValues"/>
+    <genDataTypes ecoreDataType="http://www.eclipse.org/sirius/1.1.0#//ResourceDescriptor"/>
+    <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//IdentifiedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//IdentifiedElement/uid"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DAnalysis">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DAnalysis/referencedAnalysis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//DAnalysis/semanticResources"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DAnalysis/models"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DAnalysis/eAnnotations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DAnalysis/ownedViews"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DAnalysis/selectedViews"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DAnalysis/ownedFeatureExtensions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//DAnalysis/version"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DFeatureExtension">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DFeatureExtension/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DStylizable">
+      <genOperations ecoreOperation="http://www.eclipse.org/sirius/1.1.0#//DStylizable/getStyle"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DRefreshable"/>
+    <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DMappingBased">
+      <genOperations ecoreOperation="http://www.eclipse.org/sirius/1.1.0#//DMappingBased/getMapping"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DSemanticDecorator">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DSemanticDecorator/target"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DRepresentationDescriptor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//DRepresentationDescriptor/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DRepresentationDescriptor/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DRepresentationDescriptor/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DRepresentationDescriptor/representation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//DRepresentationDescriptor/repPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//DRepresentationDescriptor/changeId"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DRepresentation">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DRepresentation/ownedRepresentationElements"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DRepresentation/representationElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DRepresentation/ownedAnnotationEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DRepresentation/uiState"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//DRepresentation/name"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//DRepresentation/documentation"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DRepresentationElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//DRepresentationElement/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DRepresentationElement/semanticElements"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DView">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DView/viewpoint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DView/ownedRepresentationDescriptors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DView/ownedExtensions"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DView/models"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//MetaModelExtension">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//MetaModelExtension/extensionGroup"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//Decoration">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//Decoration/description"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DAnalysisCustomData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//DAnalysisCustomData/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DAnalysisCustomData/data"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//LabelStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//LabelStyle/labelAlignment"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//Style">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//Style/description"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DAnalysisSessionEObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//DAnalysisSessionEObject/open"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//DAnalysisSessionEObject/resources"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//DAnalysisSessionEObject/controlledResources"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DAnalysisSessionEObject/activatedViewpoints"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DAnalysisSessionEObject/analyses"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//DAnalysisSessionEObject/synchronizationStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//SessionManagerEObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//SessionManagerEObject/ownedSessions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DResource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//DResource/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//DResource/path"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DFile"/>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DResourceContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//DResourceContainer/members"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DProject"/>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DFolder"/>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//DModel"/>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//BasicLabelStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//BasicLabelStyle/labelSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//BasicLabelStyle/labelFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//BasicLabelStyle/showIcon"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//BasicLabelStyle/iconPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//BasicLabelStyle/labelColor"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//Customizable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//Customizable/customFeatures"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//UIState">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//UIState/inverseSelectionOrder"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//UIState/elementsToSelect"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//UIState/decorationImage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//UIState/toolSections"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//UIState/subDiagramDecorationDescriptors"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//ToolInstance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//ToolInstance/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//ToolInstance/enabled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//ToolInstance/visible"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//ToolInstance/toolEntry"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//ToolInstance/filtered"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//ToolGroupInstance">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//ToolGroupInstance/tools"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//ToolGroupInstance/group"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//ToolSectionInstance">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//ToolSectionInstance/tools"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//ToolSectionInstance/section"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//ToolSectionInstance/subSections"/>
+    </genClasses>
+    <nestedGenPackages prefix="Description" disposableProviderFactory="true" ecorePackage="http://www.eclipse.org/sirius/1.1.0#//description">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.eclipse.org/sirius/1.1.0#//description/Position">
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/Position/NORTH"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/Position/WEST"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/Position/SOUTH"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/Position/EAST"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/Position/NORTH_WEST"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/Position/NORTH_EAST"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/Position/SOUTH_WEST"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/Position/SOUTH_EAST"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/Position/CENTER"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.eclipse.org/sirius/1.1.0#//description/DecorationDistributionDirection">
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/DecorationDistributionDirection/VERTICAL"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/DecorationDistributionDirection/HORIZONTAL"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors">
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/black"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/blue"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/red"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/green"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/yellow"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/purple"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/orange"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/chocolate"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/gray"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/white"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/dark_blue"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/dark_red"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/dark_green"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/dark_yellow"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/dark_purple"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/dark_orange"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/dark_chocolate"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/dark_gray"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/light_blue"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/light_red"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/light_green"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/light_yellow"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/light_purple"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/light_orange"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/light_chocolate"/>
+        <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/SystemColors/light_gray"/>
+      </genEnums>
+      <genDataTypes ecoreDataType="http://www.eclipse.org/sirius/1.1.0#//description/TypeName"/>
+      <genDataTypes ecoreDataType="http://www.eclipse.org/sirius/1.1.0#//description/InterpretedExpression"/>
+      <genDataTypes ecoreDataType="http://www.eclipse.org/sirius/1.1.0#//description/FeatureName"/>
+      <genDataTypes ecoreDataType="http://www.eclipse.org/sirius/1.1.0#//description/ImagePath"/>
+      <genDataTypes ecoreDataType="http://www.eclipse.org/sirius/1.1.0#//description/URI"/>
+      <genDataTypes ecoreDataType="http://www.eclipse.org/sirius/1.1.0#//description/TranslatableMessage"/>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/Group">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/Group/name"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/Group/ownedViewpoints"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/Group/systemColorsPalette"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/Group/userColorsPalettes"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/Group/version"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/Group/extensions"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/Extension"/>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/Component"/>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/Viewpoint">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/Viewpoint/modelFileExtension"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/Viewpoint/validationSet"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/Viewpoint/ownedRepresentations"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/Viewpoint/ownedRepresentationExtensions"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/Viewpoint/ownedJavaExtensions"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/Viewpoint/ownedMMExtensions"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/Viewpoint/ownedFeatureExtensions"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/Viewpoint/icon"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/Viewpoint/ownedTemplates"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/Viewpoint/conflicts"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/Viewpoint/reuses"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/Viewpoint/customizes"/>
+        <genOperations ecoreOperation="http://www.eclipse.org/sirius/1.1.0#//description/Viewpoint/initView">
+          <genParameters ecoreParameter="http://www.eclipse.org/sirius/1.1.0#//description/Viewpoint/initView/model"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/FeatureExtensionDescription"/>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/RepresentationDescription">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/RepresentationDescription/titleExpression"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/RepresentationDescription/initialisation"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/RepresentationDescription/metamodel"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/RepresentationDescription/showOnStartup"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/RepresentationTemplate">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/RepresentationTemplate/name"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/RepresentationTemplate/ownedRepresentations"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/RepresentationImportDescription"/>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/RepresentationExtensionDescription">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/RepresentationExtensionDescription/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/RepresentationExtensionDescription/viewpointURI"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/RepresentationExtensionDescription/representationName"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/RepresentationExtensionDescription/metamodel"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/MetamodelExtensionSetting">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/MetamodelExtensionSetting/extensionGroup"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/JavaExtension">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/JavaExtension/qualifiedClassName"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/RepresentationElementMapping">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/RepresentationElementMapping/detailDescriptions"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/RepresentationElementMapping/navigationDescriptions"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/AbstractMappingImport">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/AbstractMappingImport/hideSubMappings"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/AbstractMappingImport/inheritsAncestorFilters"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/DocumentedElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/DocumentedElement/documentation"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/DModelElement">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/DModelElement/eAnnotations"/>
+        <genOperations ecoreOperation="http://www.eclipse.org/sirius/1.1.0#//description/DModelElement/getDAnnotation">
+          <genParameters ecoreParameter="http://www.eclipse.org/sirius/1.1.0#//description/DModelElement/getDAnnotation/source"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/DAnnotation">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/DAnnotation/source"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/DAnnotation/details"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/DAnnotation/references"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/ConditionalStyleDescription">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/ConditionalStyleDescription/predicateExpression"/>
+        <genOperations ecoreOperation="http://www.eclipse.org/sirius/1.1.0#//description/ConditionalStyleDescription/checkPredicate">
+          <genParameters ecoreParameter="http://www.eclipse.org/sirius/1.1.0#//description/ConditionalStyleDescription/checkPredicate/modelElement"/>
+          <genParameters ecoreParameter="http://www.eclipse.org/sirius/1.1.0#//description/ConditionalStyleDescription/checkPredicate/viewVariable"/>
+          <genParameters ecoreParameter="http://www.eclipse.org/sirius/1.1.0#//description/ConditionalStyleDescription/checkPredicate/containerVariable"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/PasteTargetDescription">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/PasteTargetDescription/pasteDescriptions"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/DecorationDescriptionsSet">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/DecorationDescriptionsSet/decorationDescriptions"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/DecorationDescription">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/DecorationDescription/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/DecorationDescription/position"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/DecorationDescription/distributionDirection"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/DecorationDescription/preconditionExpression"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/DecorationDescription/imageExpression"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/DecorationDescription/tooltipExpression"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/SemanticBasedDecoration">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/SemanticBasedDecoration/domainClass"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/GenericDecorationDescription"/>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/Customization">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/Customization/vsmElementCustomizations"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/IVSMElementCustomization"/>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/VSMElementCustomization">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/VSMElementCustomization/predicateExpression"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/VSMElementCustomization/featureCustomizations"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/VSMElementCustomizationReuse">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/VSMElementCustomizationReuse/reuse"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/VSMElementCustomizationReuse/appliedOn"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/EStructuralFeatureCustomization">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/EStructuralFeatureCustomization/appliedOn"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/EStructuralFeatureCustomization/applyOnAll"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/EAttributeCustomization">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/EAttributeCustomization/attributeName"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/EAttributeCustomization/value"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/EReferenceCustomization">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/EReferenceCustomization/referenceName"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/EReferenceCustomization/value"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/SelectionDescription">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/SelectionDescription/candidatesExpression"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/SelectionDescription/multiple"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/SelectionDescription/tree"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/SelectionDescription/rootExpression"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/SelectionDescription/childrenExpression"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/SelectionDescription/message"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/ColorDescription"/>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/SystemColor">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/SystemColor/name"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/InterpolatedColor">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/InterpolatedColor/colorValueComputationExpression"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/InterpolatedColor/minValueComputationExpression"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/InterpolatedColor/maxValueComputationExpression"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/InterpolatedColor/colorSteps"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/ColorStep">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/ColorStep/associatedValue"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/ColorStep/associatedColor"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/FixedColor">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/FixedColor/red"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/FixedColor/green"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/FixedColor/blue"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/UserFixedColor"/>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/UserColor">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/UserColor/name"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/Environment">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/Environment/systemColors"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/Environment/defaultTools"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/Environment/labelBorderStyles"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/SytemColorsPalette">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/SytemColorsPalette/entries"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/UserColorsPalette">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/UserColorsPalette/name"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/UserColorsPalette/entries"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/AnnotationEntry">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/AnnotationEntry/source"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/AnnotationEntry/data"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/EndUserDocumentedElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/EndUserDocumentedElement/endUserDocumentation"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/IdentifiedElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/IdentifiedElement/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/IdentifiedElement/label"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/ComputedColor">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/ComputedColor/red"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/ComputedColor/green"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/ComputedColor/blue"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/DAnnotationEntry">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/DAnnotationEntry/source"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/DAnnotationEntry/details"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/AbstractVariable">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/AbstractVariable/name"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/SubVariable"/>
+      <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/InteractiveVariableDescription">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/InteractiveVariableDescription/userDocumentation"/>
+      </genClasses>
+      <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/TypedVariable">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/TypedVariable/defaultValueExpression"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/TypedVariable/valueType"/>
+      </genClasses>
+      <nestedGenPackages prefix="Style" disposableProviderFactory="true" ecorePackage="http://www.eclipse.org/sirius/1.1.0#//description/style">
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/style/StyleDescription"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/style/BasicLabelStyleDescription">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/style/BasicLabelStyleDescription/labelSize"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/style/BasicLabelStyleDescription/labelFormat"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/style/BasicLabelStyleDescription/showIcon"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/style/BasicLabelStyleDescription/labelExpression"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/style/BasicLabelStyleDescription/labelColor"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/style/BasicLabelStyleDescription/iconPath"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/style/LabelStyleDescription">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/style/LabelStyleDescription/labelAlignment"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/style/LabelBorderStyles">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/style/LabelBorderStyles/labelBorderStyleDescriptions"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/style/LabelBorderStyleDescription">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/style/LabelBorderStyleDescription/id"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/style/LabelBorderStyleDescription/name"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/style/LabelBorderStyleDescription/cornerHeight"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/style/LabelBorderStyleDescription/cornerWidth"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/style/TooltipStyleDescription">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/style/TooltipStyleDescription/tooltipExpression"/>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Tool" disposableProviderFactory="true" ecorePackage="http://www.eclipse.org/sirius/1.1.0#//description/tool">
+        <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.eclipse.org/sirius/1.1.0#//description/tool/DragSource">
+          <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/tool/DragSource/DIAGRAM"/>
+          <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/tool/DragSource/PROJECT_EXPLORER"/>
+          <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/tool/DragSource/BOTH"/>
+        </genEnums>
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/ToolEntry"/>
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/AbstractToolDescription">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/AbstractToolDescription/precondition"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/AbstractToolDescription/forceRefresh"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/AbstractToolDescription/filters"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/AbstractToolDescription/elementsToSelect"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/AbstractToolDescription/inverseSelectionOrder"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/MappingBasedToolDescription"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/ToolDescription">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/ToolDescription/iconPath"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/ToolDescription/element"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/ToolDescription/elementView"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/ToolDescription/initialOperation"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/PasteDescription">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/PasteDescription/container"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/PasteDescription/containerView"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/PasteDescription/copiedView"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/PasteDescription/copiedElement"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/PasteDescription/initialOperation"/>
+          <genOperations ecoreOperation="http://www.eclipse.org/sirius/1.1.0#//description/tool/PasteDescription/getContainers"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/SelectionWizardDescription">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/SelectionWizardDescription/element"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/SelectionWizardDescription/containerView"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/SelectionWizardDescription/container"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/SelectionWizardDescription/initialOperation"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/SelectionWizardDescription/iconPath"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/SelectionWizardDescription/windowTitle"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/SelectionWizardDescription/windowImagePath"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription/element"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription/containerView"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription/container"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription/initialOperation"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription/iconPath"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription/windowTitle"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription/windowImagePath"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription/message"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription/choiceOfValuesMessage"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription/candidatesExpression"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription/tree"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription/rootExpression"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription/childrenExpression"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription/selectedValuesMessage"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/PaneBasedSelectionWizardDescription/preSelectedCandidatesExpression"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationCreationDescription">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationCreationDescription/titleExpression"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationCreationDescription/browseExpression"/>
+          <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationCreationDescription/representationDescription"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationCreationDescription/initialOperation"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationCreationDescription/containerViewVariable"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationCreationDescription/representationNameVariable"/>
+          <genOperations ecoreOperation="http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationCreationDescription/getMappings"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationNavigationDescription">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationNavigationDescription/browseExpression"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationNavigationDescription/navigationNameExpression"/>
+          <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationNavigationDescription/representationDescription"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationNavigationDescription/containerViewVariable"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationNavigationDescription/containerVariable"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationNavigationDescription/representationNameVariable"/>
+          <genOperations ecoreOperation="http://www.eclipse.org/sirius/1.1.0#//description/tool/RepresentationNavigationDescription/getMappings"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/MenuItemOrRef"/>
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/MenuItemDescription"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/MenuItemDescriptionReference">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/MenuItemDescriptionReference/item"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/OperationAction">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/OperationAction/view"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/OperationAction/initialOperation"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/ExternalJavaAction">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/ExternalJavaAction/id"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/ExternalJavaAction/parameters"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/ExternalJavaActionCall">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/ExternalJavaActionCall/action"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/PopupMenu">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/PopupMenu/menuItemDescription"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/VariableContainer">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/VariableContainer/subVariables"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/AcceleoVariable">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/AcceleoVariable/computationExpression"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/DialogVariable">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/DialogVariable/dialogPrompt"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/ElementDropVariable"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/ElementSelectVariable"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/ElementVariable"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/ElementViewVariable"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/ElementDeleteVariable"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/DropContainerVariable"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/SelectContainerVariable"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/ContainerViewVariable"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/SelectModelElementVariable"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/EditMaskVariables">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/EditMaskVariables/mask"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/ContainerModelOperation">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/ContainerModelOperation/subModelOperations"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/ModelOperation"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/InitialNodeCreationOperation">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/InitialNodeCreationOperation/firstModelOperations"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/InitialOperation">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/InitialOperation/firstModelOperations"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/InitEdgeCreationOperation">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/InitEdgeCreationOperation/firstModelOperations"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/InitialContainerDropOperation">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/InitialContainerDropOperation/firstModelOperations"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/CreateInstance">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/CreateInstance/typeName"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/CreateInstance/referenceName"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/CreateInstance/variableName"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/ChangeContext">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/ChangeContext/browseExpression"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/SetValue">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/SetValue/featureName"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/SetValue/valueExpression"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/SetObject">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/SetObject/featureName"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/SetObject/object"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/Unset">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/Unset/featureName"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/Unset/elementExpression"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/MoveElement">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/MoveElement/newContainerExpression"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/MoveElement/featureName"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/RemoveElement"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/For">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/For/expression"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/For/iteratorName"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/If">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/If/conditionExpression"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/DeleteView"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/NameVariable"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/ExternalJavaActionParameter">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/ExternalJavaActionParameter/name"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/ExternalJavaActionParameter/value"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/ToolFilterDescription">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/ToolFilterDescription/precondition"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/ToolFilterDescription/elementsToListen"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/ToolFilterDescription/listeners"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/FeatureChangeListener">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/FeatureChangeListener/domainClass"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/FeatureChangeListener/featureName"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/Case">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/Case/conditionExpression"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/SwitchChild">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/SwitchChild/subModelOperations"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/Default"/>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/Switch">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/Switch/cases"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/Switch/default"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/Let">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/Let/variableName"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/Let/valueExpression"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/GroupMenu">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/GroupMenu/locationURI"/>
+          <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/GroupMenu/popupMenus"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/tool/GroupMenu/itemDescriptions"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/GroupMenuItem"/>
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/tool/MenuItemDescriptionWithIcon">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/tool/MenuItemDescriptionWithIcon/icon"/>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Validation" disposableProviderFactory="true" ecorePackage="http://www.eclipse.org/sirius/1.1.0#//description/validation">
+        <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.eclipse.org/sirius/1.1.0#//description/validation/ERROR_LEVEL">
+          <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/validation/ERROR_LEVEL/INFO"/>
+          <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/validation/ERROR_LEVEL/WARNING"/>
+          <genEnumLiterals ecoreEnumLiteral="http://www.eclipse.org/sirius/1.1.0#//description/validation/ERROR_LEVEL/ERROR"/>
+        </genEnums>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/validation/ValidationSet">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/validation/ValidationSet/name"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/validation/ValidationSet/ownedRules"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/validation/ValidationSet/reusedRules"/>
+          <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/validation/ValidationSet/allRules"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/validation/ValidationRule">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/validation/ValidationRule/level"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/validation/ValidationRule/message"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/validation/ValidationRule/audits"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/validation/ValidationRule/fixes"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/validation/SemanticValidationRule">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/validation/SemanticValidationRule/targetClass"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/validation/ViewValidationRule">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/validation/ViewValidationRule/targets"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/validation/RuleAudit">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/validation/RuleAudit/auditExpression"/>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/validation/ValidationFix">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/validation/ValidationFix/name"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.eclipse.org/sirius/1.1.0#//description/validation/ValidationFix/initialOperation"/>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Audit" disposableProviderFactory="true" ecorePackage="http://www.eclipse.org/sirius/1.1.0#//description/audit">
+        <genClasses image="false" ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/audit/InformationSection">
+          <genOperations ecoreOperation="http://www.eclipse.org/sirius/1.1.0#//description/audit/InformationSection/getContent">
+            <genParameters ecoreParameter="http://www.eclipse.org/sirius/1.1.0#//description/audit/InformationSection/getContent/eObj"/>
+          </genOperations>
+        </genClasses>
+        <genClasses ecoreClass="http://www.eclipse.org/sirius/1.1.0#//description/audit/TemplateInformationSection">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.eclipse.org/sirius/1.1.0#//description/audit/TemplateInformationSection/templatePath"/>
+        </genClasses>
+      </nestedGenPackages>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

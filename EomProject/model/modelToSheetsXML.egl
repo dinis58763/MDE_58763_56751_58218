@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Table>
+
+    [% for (SheetsModel in Sheet.allInstances()) { %]
+    [% for (line in SheetsModel.lines) { %]
+    <Row>
+      	<Name>[% if (line.cells.size() > 0 and line.cells.at(0) != null) { %][%=line.cells.at(0).value%] [%}%][% else { %] null [%}%]</Name>
+        <Description>[% if (line.cells.size() > 1 and line.cells.at(1) != null) { %][%=line.cells.at(1).value%] [%}%][% else { %] null [%}%]</Description>
+        <taskDeadline>[% if (line.cells.size() > 2 and line.cells.at(2) != null) { %][%=line.cells.at(2).value%] [%}%][% else { %] null [%}%] </taskDeadline>
+        <status>[% if (line.cells.size() > 3 and line.cells.at(3) != null) { %][%=line.cells.at(3).value%] [%}%][% else { %] null [%}%]</status>
+    </Row>
+    [%}%]
+    [%}%]
+</Table>
+
+
+[%
+  var t : Template = TemplateFactory.load("modelToSheetsXML.egl");
+  t.generate("sheets.xml");
+%]

@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\begin{document}
+
+% Capa
+[% for (Docs in Docs.allInstances()) { %]
+\begin{titlepage}
+\centering
+\Large\textbf{[%=Docs.cover.student_name%]}
+\vspace{0.5cm}
+\\
+\Large\textbf{Supervisor: [%=Docs.cover.prof_name%]}
+\vspace{0.5cm}
+\\
+\Large\textbf{[%=Docs.cover.degree_name%]}
+\\
+\vspace{7cm}
+\Huge\textbf{[%=Docs.cover.thesis_name%]}
+\vspace{7cm}
+\\
+
+\Large\textbf{[%=Docs.cover.dept_name%]} ,
+\Large\textbf{[%=Docs.cover.uni_name%]}
+\\
+\vspace{0.2cm}
+\Large\textbf{\today}
+\end{titlepage}
+
+% Índice
+\tableofcontents
+\newpage
+
+  \section{Tasks, Milestones and Ethical Issues}
+  \begin{sectionPage}
+    [% for (section in Docs.sections) { %]
+    \Large\textbf{Name: }[%=section.name%]} 
+    \\
+    \Large\textbf{Description: }[%=section.description%]
+    \\
+    \\
+    [%}%]
+   \end{sectionPage}
+  
+
+
+	% Conclusão e Referencias
+	\section{Conclusion}
+	\begin{conc}
+    [% for (ref in Docs.references) { %]
+    \Large\textbf{Name: }[%=ref.tool_name%]
+    \\
+    \\
+    [%}%]
+   \end{conc}
+\end{document}
+[%}%]
+
+[%
+  var t : Template = TemplateFactory.load("modelToLatex.egl");
+  t.generate("latex.tex");
+%]

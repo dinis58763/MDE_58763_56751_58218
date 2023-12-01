@@ -1,0 +1,44 @@
+rule ThesisModel2Docs
+    transform t : input!ThesisModel
+    to ds : output!Docs {
+    
+	// Create the Cover instance
+    var c = new output!Cover;
+    c.thesis_name = t.thesis.name;
+	c.prof_name = t.professor.name;
+	c.degree_name = t.thesis.degree.name;
+	c.student_name = t.student.name;
+	c.dept_name = t.university.faculty.departments.name;
+	c.fac_name = t.university.faculty.name;
+	c.uni_name = t.university.name; 
+	ds.cover = c;
+	
+	for (task in t.thesis.tasks) {
+        var s = new output!Section;
+        s.name = task.name;
+        s.description = task.taskDescription;
+        ds.sections.add(s);
+    }
+    
+    for (milestone in t.thesis.milestones) {
+        var s = new output!Section;
+        s.name = milestone.name;
+        s.description = milestone.description;
+        ds.sections.add(s);
+    }
+    
+    for (et in t.thesis.ethicalIssues) {
+        var s = new output!Section;
+        s.name = et.name;
+        s.description = et.issueDescription;
+        ds.sections.add(s);
+    }
+    
+     for (tool in t.thesis.tools) {
+        var s = new output!Reference;
+        s.tool_name = tool.name;
+        ds.references.add(s);
+    }
+    
+    
+}

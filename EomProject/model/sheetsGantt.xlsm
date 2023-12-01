@@ -1,0 +1,134 @@
+Sub Macro7()
+'
+' Macro7 Macro
+'
+
+'
+    Application.CutCopyMode = False
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlCenter
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    ActiveCell.FormulaR1C1 = "startDate"
+    Range("G1").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlCenter
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    ActiveCell.FormulaR1C1 = "duration"
+    Range("F2").Select
+    ActiveCell.FormulaR1C1 = "10/15/2023"
+    Range("G2").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=RC[-4]-RC[-1]"
+    Range("F3").Select
+    ActiveCell.FormulaR1C1 = "    2023-11-01"
+    Selection.NumberFormat = "m/d/yyyy"
+    Range("G3").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=RC[-4]-RC[-1]"
+    Range("F4").Select
+    ActiveCell.FormulaR1C1 = "    2023-11-21"
+    Selection.NumberFormat = "m/d/yyyy"
+    Range("G4").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=RC[-4]-RC[-1]"
+    Range("F2").Select
+    Selection.NumberFormat = "General"
+    Range("F3").Select
+    Selection.NumberFormat = "General"
+    Range("F4").Select
+    Selection.NumberFormat = "General"
+    Range("A1:A4,F1:G4").Select
+    Range("F1").Activate
+    ActiveSheet.Shapes.AddChart2(297, xlBarStacked).Select
+    ActiveChart.SetSourceData Source:=Range("Row!$A$1:$A$4,Row!$F$1:$G$4")
+    ActiveChart.FullSeriesCollection(1).Select
+    ActiveChart.FullSeriesCollection(1).Points(3).Select
+    ActiveChart.ChartArea.Select
+    ActiveChart.FullSeriesCollection(1).Select
+    ActiveChart.Axes(xlValue).Select
+    Selection.Format.Fill.Visible = msoFalse
+    Range("F2").Select
+    Selection.NumberFormat = "m/d/yyyy"
+    Range("F3").Select
+    Selection.NumberFormat = "m/d/yyyy"
+    Range("F4").Select
+    Selection.NumberFormat = "m/d/yyyy"
+    ActiveSheet.ChartObjects("Chart 1").Activate
+    ActiveChart.Axes(xlCategory).Select
+    ActiveChart.Axes(xlCategory).ReversePlotOrder = True
+    ActiveChart.Legend.Select
+    Selection.Delete
+    ActiveSheet.ChartObjects("Chart 1").Activate
+    ActiveChart.Axes(xlValue).Select
+    Selection.TickLabels.Orientation = -45
+    ActiveChart.ChartTitle.Select
+    ActiveChart.ChartTitle.Text = "Gantt chart"
+    Selection.Format.TextFrame2.TextRange.Characters.Text = "Gantt chart"
+    With Selection.Format.TextFrame2.TextRange.Characters(1, 11).ParagraphFormat
+        .TextDirection = msoTextDirectionLeftToRight
+        .Alignment = msoAlignCenter
+    End With
+    With Selection.Format.TextFrame2.TextRange.Characters(1, 11).Font
+        .BaselineOffset = 0
+        .Bold = msoFalse
+        .NameComplexScript = "+mn-cs"
+        .NameFarEast = "+mn-ea"
+        .Fill.Visible = msoTrue
+        .Fill.ForeColor.RGB = RGB(89, 89, 89)
+        .Fill.Transparency = 0
+        .Fill.Solid
+        .Size = 14
+        .Italic = msoFalse
+        .Kerning = 12
+        .Name = "+mn-lt"
+        .UnderlineStyle = msoNoUnderline
+        .Spacing = 0
+        .Strike = msoNoStrike
+    End With
+    ActiveChart.FullSeriesCollection(2).Select
+    ActiveChart.FullSeriesCollection(2).Points(1).Select
+    With Selection.Format.Fill
+        .Visible = msoTrue
+        .ForeColor.ObjectThemeColor = msoThemeColorAccent4
+        .ForeColor.TintAndShade = 0
+        .ForeColor.Brightness = 0
+        .Transparency = 0
+        .Solid
+    End With
+    ActiveChart.FullSeriesCollection(2).Points(2).Select
+    With Selection.Format.Fill
+        .Visible = msoTrue
+        .ForeColor.ObjectThemeColor = msoThemeColorAccent4
+        .ForeColor.TintAndShade = 0
+        .ForeColor.Brightness = 0
+        .Transparency = 0
+        .Solid
+    End With
+    ActiveChart.FullSeriesCollection(2).Points(3).Select
+    With Selection.Format.Fill
+        .Visible = msoTrue
+        .ForeColor.ObjectThemeColor = msoThemeColorAccent4
+        .ForeColor.TintAndShade = 0
+        .ForeColor.Brightness = 0
+        .Transparency = 0
+        .Solid
+    End With
+    Range("I19").Select
+   	
+End Sub
+
+

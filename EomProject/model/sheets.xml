@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Table>
+
+    <Row>
+      	<Name>Literature Review</Name>
+        <Description>This is the description of the literature review</Description>
+        <taskDeadline>2023-11-01 </taskDeadline>
+        <status>DONE</status>
+    </Row>
+    <Row>
+      	<Name>Research</Name>
+        <Description>This is the description of the research</Description>
+        <taskDeadline>2023-11-21 </taskDeadline>
+        <status>IN_PROGESS</status>
+    </Row>
+    <Row>
+      	<Name>Data Collection</Name>
+        <Description>This is the description of the Data Collection</Description>
+        <taskDeadline>2023-12-20 </taskDeadline>
+        <status>NOT_STARTED</status>
+    </Row>
+</Table>
+
+

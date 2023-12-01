@@ -1,0 +1,60 @@
+rule Task2Column
+    transform t : input!ThesisModel
+    to ds : output!Sheet {
+    
+    var s1 = new output!Column;
+    s1.value = "name";
+    ds.columns.add(s1);
+
+    var s2 = new output!Column;
+    s2.value = "description";
+    ds.columns.add(s2);
+
+    var s3 = new output!Column;
+    s3.value = "taskDeadline";
+    ds.columns.add(s3);
+    
+    var s4 = new output!Column;
+    s4.value = "status";
+    ds.columns.add(s4);
+    
+    var idCounter = 1;
+    for (task in t.thesis.tasks) {
+    	var t = new output!Line;
+    	t.id = idCounter;
+    	ds.lines.add(t);
+        for (column in ds.columns) {
+            var s = new output!Cell;
+			if (column.value == "name") {
+                s.value = task.name;
+                if (task.name != null)
+	                t.cells.add(s);
+            }
+            else if (column.value == "description") {
+                s.value = task.taskDescription;
+                if (task.taskDescription != null)
+	                t.cells.add(s);
+            }
+            else if (column.value == "taskDeadline") {
+                if (task.deadline != null) {
+                	s.value = task.deadline.toString();
+                    t.cells.add(s);
+                }
+                else 
+                	s.value = task.deadline;
+            }
+            else if (column.value == "status") {
+                if (task.status != null) {
+                	s.value = task.status.toString();
+                    t.cells.add(s);
+                }
+                else {
+                	s.value = task.status;
+                	t.cells.add(s);
+                }
+            }
+            
+        }
+        idCounter++;
+    }
+}

@@ -1,0 +1,78 @@
+@namespace(uri="http://www.example.org/eomProject", prefix="eomProject")
+package eomProject;
+
+import "http://www.eclipse.org/emf/2003/XMLType";
+
+class Task {
+	attr String name;
+	attr String taskDescription;
+	attr type.Date deadline;
+	attr Status status = "NOT_STARTED";
+}
+
+class Milestone {
+	attr String name;
+	attr String description;
+	attr type.Date completionDate;
+}
+
+class Student {
+	attr String name;
+	attr int age;
+	attr String emailAddress;
+}
+
+class Tool {
+	attr String name;
+}
+
+class EthicalIssue {
+	attr String name;
+	attr String issueDescription;
+}
+
+class Faculty {
+	attr String name;
+	val Department[1] departments;
+}
+
+class University {
+	attr String name;
+	val Faculty[1] faculty;
+}
+
+class Professor {
+	attr String name;
+}
+
+class Thesis {
+	attr String name;
+	attr String description;
+	val Degree[1] degree;
+	val Milestone[+] milestones;
+	val EthicalIssue[*] ethicalIssues;
+	val Task[+] tasks;
+	val Tool[*] tools;
+}
+
+enum Status {
+	DONE = 1;
+	IN_PROGESS = 2;
+	NOT_STARTED = 3;
+}
+
+class ThesisModel {
+	val University[1] university;
+	val Thesis thesis;
+	val Professor[1] professor;
+	val Student[1] student;
+}
+
+class Department {
+	attr String name;
+}
+
+class Degree {
+	attr String name;
+}
+
