@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sirius_new -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="sirius_new.presentation.Sirius_newModelWizardID"
+            name="%_UI_Sirius_newModelWizard_label"
+            class="sirius_new.presentation.Sirius_newModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Sirius_newModelFile.gif">
+         <description>%_UI_Sirius_newModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sirius_new -->
+      <editor
+            id="sirius_new.presentation.Sirius_newEditorID"
+            name="%_UI_Sirius_newEditor_label"
+            icon="icons/full/obj16/Sirius_newModelFile.gif"
+            extensions="sirius_new"
+            class="sirius_new.presentation.Sirius_newEditor"
+            contributorClass="sirius_new.presentation.Sirius_newActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
